@@ -1,0 +1,84 @@
+.btn,
+.btn-right {
+  position: relative;
+  display: flex;
+  margin: 0;
+  margin-top: 30px;
+  padding: 10px 30px;
+  border-radius: 5px;
+  background-color: palevioletred;
+  color: white;
+  font: inherit;
+  /* overflow: hidden; */
+
+  /* transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+}
+
+.btn-right::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  margin-left: 10px;
+  background-image: url(/images/clock\ 1.svg);
+  background-size: contain;
+
+  /* transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+}
+
+.btn::before,
+.btn::after,
+.btn-right::before,
+.btn-right::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+
+  background-size: contain;
+
+  /* transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+}
+
+.btn::before {
+  margin-right: 10px;
+  background-image: url(/images/clock\ 1.svg);
+}
+
+.btn-right::before {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  background-image: url(/images/diagram\ 1.svg);
+}
+
+.btn-right:hover::after {
+  transform: translateY(-35px);
+}
+
+.btn:hover::before,
+.btn:focus::after {
+  transform: translateY(-35px);
+}
+
+.btn::after {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+
+  background-image: url(/images/diagram\ 1.svg);
+
+  transform: translateY(calc(-50% + 35px));
+}
+
+.btn:hover::after,
+.btn:focus::after {
+  transform: translateY(-50%);
+}
+
+.btn:hover,
+.btn:focus,
+.btn-right:hover,
+.btn-right:focus {
+  background-color: lightseagreen;
+}

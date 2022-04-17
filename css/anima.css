@@ -70,20 +70,16 @@
   background-color: lightseagreen;
 }
 
-.btn-right:hover::after {
-  transform: translateY(-35px);
-}
-
-.btn-right:hover::before {
-  transform: translateY(-50%);
-}
-
 .btn:hover::before,
-.btn:focus::before {
+.btn:focus::before,
+.btn-right:hover::after,
+.btn-right:focus::after {
   transform: translateY(-35px);
 }
 
 .btn:hover::after,
-.btn:focus::after {
+.btn:focus::after,
+.btn-right:hover::before,
+.btn-right:focus::before {
   transform: translateY(-50%);
 }
